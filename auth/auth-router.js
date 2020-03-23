@@ -2,7 +2,7 @@ const router = require('express').Router();
 const db = require('../database/dbConfig');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-
+const restrict = require('./authenticate-middleware');
 
 router.post('/register', async (req, res) => {
 	// implement registration
